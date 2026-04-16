@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ICT 10 - Account Creation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.9.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.9.1/core.js"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+
+            background-image: url('https://i.pinimg.com/1200x/04/bf/9a/04bf9af22f7283e29e91ccd61617d27d.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .box {
+            background: #ffffff;
+            width: 1000px;
+            max-width: 95%;
+            padding: 25px 50px;
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(0, 100, 0, 0.15);
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            color: #7da8d6;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 10px;
+            border: 1px solid #a5bbdd;
+            background-color: #d6edff;
+        }
+
+        /* 🔥 BUTTONS */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            width: 90%;
+            margin-top: 10px;
+        }
+
+        .btn-group button {
+            flex: 1;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background: #7da8d6;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-group button:hover {
+            background: #61adff;
+        }
+
+        /* 🔥 OUTPUT BOX (SEPARATE) */
+        .output-box {
+            width: 90%;
+            margin-top: 15px;
+            padding: 12px;
+            background: #f0f6ff;
+            border-radius: 12px;
+            border: 1px solid #a5bbdd;
+            min-height: 40px;
+
+            word-wrap: break-word;
+        }
+
+        /* IMAGE */
+        #image img {
+            display: block;
+            margin: 20px auto 10px;
+            width: 230px;
+            max-width: 100%;
+            border: 4px solid #7da8d6;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2>Grade 10 Classmate System</h2>
+
+        <input type="text" id="name" placeholder="Enter Name">
+        <input type="text" id="section" placeholder="Enter Section">
+        <input type="text" id="subject" placeholder="Favorite Subject">
+
+        
+        <div class="btn-group">
+            <button py-click="show_list">Show List</button>
+            <button py-click="add_classmate">Add Classmate</button>
+        </div>
+
+        <div class="output-box" id="output"></div>
+        <div id="image">
+            <img src="https://i.pinimg.com/736x/bc/9a/f0/bc9af032fa4daecc74d4a62ba4b956b7.jpg" alt="Image">
+        </div>
+    </div>
+
+    <py-script src="main.py"></py-script>
+
+</body>
+</html>
